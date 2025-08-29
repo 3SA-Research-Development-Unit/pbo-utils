@@ -27,8 +27,8 @@ jobs:
       - name: Build executables
         run: |
           TARGET=$([ "${{ matrix.os }}" = "windows-latest" ] && echo "win" || ([ "${{ matrix.os }}" = "macos-latest" ] && echo "macos" || echo "linux"))
-          pkg pack.js --targets node20-$TARGET --output pack
-          pkg unpack.js --targets node20-$TARGET --output unpack
+          pkg pack.js --targets node18-$TARGET --output pack
+          pkg unpack.js --targets node18-$TARGET --output unpack
 
       - name: Collect artifacts
         run: |
