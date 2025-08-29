@@ -2,8 +2,8 @@ name: Build and Release pack/unpack executables
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - main
 
 jobs:
   build:
